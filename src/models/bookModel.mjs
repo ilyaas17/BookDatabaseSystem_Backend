@@ -7,7 +7,9 @@ const bookSchema = new mongoose.Schema(
         genre: String,
         ISBN: String,
         availability: Boolean
-    },{timestamps:true}
+    },{
+        timestamps:true
+    }
 );
 const BookDbModel = mongoose.model("bookDatabase",bookSchema);
 

@@ -15,7 +15,8 @@ const findBook = async (req,res)=>{
   const queriedData = req.query;
 
     const searchData = await BookDbModel.find(queriedData).
-    catch((err)=>{return res.status(400).send({
+    catch((err)=>{
+      return res.status(400).send({
       status:"Failure",
       message:err
     })});

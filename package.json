@@ -4,7 +4,8 @@
   "description": "Assignment to create a Books Management App. This app will have functions to add and search books.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon ../src/index.mjs"
   },
   "author": "",
   "license": "ISC",
