@@ -12,7 +12,8 @@ const createBook = async (req, res) => {
 
 const findBook = async (req,res)=>{
 
-  const queriedData = req.query;
+  try{
+    const queriedData = req.query;
 
     const searchData = await BookDbModel.find(queriedData).
     catch((err)=>{
@@ -34,6 +35,12 @@ const findBook = async (req,res)=>{
           message : searchData
       })
     }
+  } catch(e){
+      return res.status(500).send({
+        status: "Failure",
+        message: err.message || "An error occurred while searching for books"
+      });
+  }
     
 }
 
